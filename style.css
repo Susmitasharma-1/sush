@@ -89,18 +89,328 @@ footer {
   color: #fff;
   padding: 15px;
 }
-/* Profile Picture */
-.profile-container {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+
+/*
+   Week 02 - Step 1: Animated Skill Bars
+---------------------------- */
+
+#skills {
+  text-align: center;
+  padding: 40px 20px;
 }
 
-.profile-pic {
-  width: 160px;        
-  height: 200px;
-  border-radius: 0%;  
-  object-fit: cover;   
-  border: 3px solid #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.skill {
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: left;
 }
+
+.skill p {
+  margin: 5px 0;
+  font-weight: bold;
+  color: #444;
+}
+
+.skill-bar {
+  width: 0;
+  height: 20px;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+/* ----------------------------------
+   Step 2: Contact Form Styling
+---------------------------------- */
+#contact {
+  background: #f9f9f9;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contact label {
+  font-weight: 600;
+  text-align: left;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-size: 1em;
+}
+
+#contact button {
+  background: #84fab0;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contact button:hover {
+  background: #8fd3f4;
+}
+
+#formStatus {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* Step 3: Project Card Hover Effect */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: #f0f0f0;
+  padding: 20px;
+  width: 260px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/* Step 4: Media Section */
+#media {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#media video,
+#media audio,
+#media canvas {
+  margin: 15px 0;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+/* Step 5: Image Slider */
+#gallery {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider-buttons {
+  margin-top: 10px;
+}
+
+.slider-buttons button {
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: none;
+  background: #84fab0;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-buttons button:hover {
+  background: #8fd3f4;
+}
+
+/* Dark / Light Mode */
+body.light {
+  background: #fdfdfd;
+  color: #333;
+}
+
+body.dark {
+  background: #222;
+  color: #f1f1f1;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #444, #666);
+}
+
+body.dark .project-card,
+body.dark .skill,
+body.dark #contact {
+  background: #333;
+  color: #f1f1f1;
+}
+
+#themeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  background: #f2c0c0;
+  cursor: pointer;
+}
+
+
+.edu-item {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: #000;      /* black circle */
+  border: none;
+  border-radius: 50%;     /* makes it a circle */
+  cursor: pointer;
+  display: none;          /* hidden until scroll */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+#education {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.edu-box {
+  background: #f0f0f0;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.edu-box:hover {
+  transform: scale(1.02);
+}
+
+.edu-box p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+
+
+#education h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.edu-box {
+    width: 90%;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.edu-box h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.edu-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+.edu-table th, .edu-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.header-row {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+}
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #84fab0, #8fd3f4);
+    color: #fff;
+    text-align: center;      /* center everything */
+    padding: 80px 20px;     /* spacing from top */
+    position: relative;
+}
+
+/* Container for photo + info */
+.header-content {
+    display: flex;
+    flex-direction: column;  /* vertical stack */
+    align-items: center;     /* horizontally center */
+}
+
+/* Profile photo */
+.profile-pic {
+    width: 180px;            /* moderate size */
+    height: 180px;
+    border-radius: 50%;      /* make it circle */
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin-bottom: 20px;     /* space below photo */
+}
+
+/* Profile info */
+.profile-info h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+/* Contact button */
+header .btn {
+    margin-top: 0;
+}
+
+
+

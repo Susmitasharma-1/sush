@@ -12,13 +12,27 @@
 
   <!-- Header -->
   <header>
+  <div class="header-content">
+    <!-- Profile Photo -->
     <div class="profile-container">
-    <img src="images/Mee.jpg" alt="Susmita Sharma" class="profile-pic">
+      <img src="images/Mee.jpg" alt="Susmita Sharma" class="profile-pic">
+    </div>
+
+    <!-- Profile Info directly below -->
+    <div class="profile-info">
+      <h1>Susmita Sharma</h1>
+      <p>BSc IT Student | Web Developer | Digital Creator</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+    <!-- Optional Theme Button -->
+    <button id="themeBtn">clickMe</button>
   </div>
-    <h1>susmita sharma</h1>
-    <p>BSc IT Student | Web Developer | Digital Creator</p>
-    <a href="#contact" class="btn">Contact Me</a>
-  </header>
+</header>
+
+
+
+
 
   <!-- About Section -->
   <section id="about">
@@ -28,39 +42,151 @@
       I enjoy working on web design, creative content, and interactive projects. Beyond coding, i'm intrested to know how technology shapes our learning and creativity. I want to grow as a developer and work on different project, build new and meaningful projects.
     </p>
   </section>
+  
+<div class="edu-box">
+    <h2>Education & Qualification</h2>
+
+    <table class="edu-table">
+        <tr class="header-row">
+            <th>Level</th>
+            <th>Institution</th>
+            <th>Year Passed</th>
+            <th>Grades</th>
+        </tr>
+        <tr>
+            <td>Bachelor(Bsc Hons) Computer Science</td>
+            <td>Biratnagar International College</td>
+            <td>running</td>
+            <td>-</td>
+        <tr>
+            <td>High School</td>
+            <td>Shikshadeep College</td>
+            <td>2023</td>
+            <td>A</td>
+        </tr>
+
+        <tr>
+            <td>Secondary School</td>
+            <td>Pole-star secondary Boarding School</td>
+            <td>2021</td>
+            <td>A+</td>
+        </tr>
+        </tr>
+    </table>
+</div>
+
+
+
+
 
   <!-- Skills Section -->
   <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Python, PHP, MySQL</li>
-      <li>UI/UX Design</li>
-      <li>Digital Content Creation</li>
-    </ul>
-  </section>
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <p>HTML</p>
+    <div class="skill-bar" data-progress="90%"></div>
+  </div>
+
+  <div class="skill">
+    <p>CSS</p>
+    <div class="skill-bar" data-progress="85%"></div>
+  </div>
+
+  <div class="skill">
+    <p>JavaScript</p>
+    <div class="skill-bar" data-progress="70%"></div>
+  </div>
+
+  <div class="skill">
+    <p>Python</p>
+    <div class="skill-bar" data-progress="60%"></div>
+  </div>
+</section>
+
+  
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="projects-container">
+    <div class="project-card" data-url="https://weaher.infy.uk/?i=2">
       <h3>Weather App</h3>
-      <p>A web app using HTML, CSS, JS, PHP, and OpenWeatherMap API to display live weather data.</p>
+      <p>A web app using HTML, CSS, JS, PHP, and the OpenWeatherMap API to show live weather data.</p>
     </div>
 
     <div class="project-card">
       <h3>Noughts and Crosses Game</h3>
-      <p>A Python-based Tic-Tac-Toe game with full game logic and modular design.</p>
+      <p>A Python-based Tic-Tac-Toe game with complete logic and modular design.</p>
     </div>
-    <div class="project-card"></div>
-    <h3>3D Gaming</h3>
-    <p>A 3D gaming made using unity on topic Education simulation to teach people how to spot hazards on the road while driving.A game to let people know the danger spot on the road for safer driving. </p>
-  </section>
 
-  <!-- Contact Section --
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:susmitasharma670@example.com">susmitasharma@example.com</a></p>
+    <div class="project-card" >
+      <h3>3D Education Game</h3>
+      <p>A 3D Unity game that teaches road-safety awareness by identifying driving hazards.</p>
+    </div>
+  </div>
+</section>
+<!-- Media Section -->
+<section id="media">
+  <h2>Media Section</h2>
+
+  <div class="media-container">
+    <!-- Video -->
+    <video controls width="400" poster="images/WhatsApp Image 2025-11-25 at 12.32.17 PM.jpeg">
+
+      <source src="media/IMG_4887.MOV" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio -->
+    <audio controls>
+      <source src="media/WhatsApp Audio 2025-11-20 at 6.47.33 PM.mpeg" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Canvas -->
+    <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;"></canvas>
+  </div>
+</section>
+<!-- Image Slider Section -->
+<section id="gallery">
+  <h2>Image Slider</h2>
+
+  <div class="slider-container">
+    <div class="slider">
+      <img src="images/WhatsApp Image 2025-03-28 at 16.37.31_34743328.jpg" class="slide active" alt="Slide 1">
+      <img src="images/WhatsApp Image 2025-11-25 at 12.58.44 PM.jpeg" class="slide" alt="Slide 2">
+      <img src="images/WhatsApp Image 2025-11-20 at 7.02.02 PM.jpeg" class="slide" alt="Slide 3">
+    </div>
+
+    <div class="slider-buttons">
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact Section -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form id="contactForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="" required value="">
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" placeholder="" required value="">
+
+    <label for="message">Message</label>
+    <textarea id="message" placeholder=""></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="formStatus" style="text-align:center; color:green; margin-top:10px;"></p>
+
     
   </section>
 
@@ -68,8 +194,9 @@
   <footer>
     <p>© 2025 susmita sharma. All rights reserved.</p>
   </footer>
-
+  <button id="backToTop"></button>
   <script src="script.js"></script> 
-    
+   
+ 
 </body>
 </html>

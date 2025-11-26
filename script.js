@@ -39,7 +39,7 @@ if (contactForm) {
     localStorage.setItem('formData', JSON.stringify(formData));
 
     // Redirect to form-details.html
-    window.location.href = 'form-details.html';
+    window.location.href = 'details.html';
   });
 }
 

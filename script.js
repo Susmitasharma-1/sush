@@ -118,7 +118,7 @@ if (nextBtn && prevBtn && slides.length > 0) {
    STEP 6: Dark / Light Mode Toggle with localStorage
 ----------------------------------- */
 const body = document.body;
-const themeBtn = document.getElementById('themeBtn');
+const themeBtn = document.getElementById('themeToggle');
 
 let savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {

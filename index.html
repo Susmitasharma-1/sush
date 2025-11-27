@@ -11,8 +11,23 @@
 <body>
 
   <!-- Header -->
-  <header>
-  <div class="header-content">
+  <header id="home">
+  <!-- Navigation Bar -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="header-content"></div>
+
+
+
     <!-- Profile Photo -->
     <div class="profile-container">
       <img src="images/Mee.jpg" alt="Susmita Sharma" class="profile-pic">
@@ -24,9 +39,10 @@
       <p>BSc IT Student | Web Developer | Digital Creator</p>
       <a href="#contact" class="btn">Contact Me</a>
     </div>
-
     <!-- Optional Theme Button -->
-    <button id="themeBtn">clickMe</button>
+    
+    <button id="themeToggle" title="Toggle Theme"></button>
+
   </div>
 </header>
 
@@ -186,6 +202,7 @@
   </form>
 
   <p id="formStatus" style="text-align:center; color:green; margin-top:10px;"></p>
+
 
     
   </section>
